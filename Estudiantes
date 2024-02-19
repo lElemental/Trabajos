@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+#define MAX_ESTUDIANTES 3
+#define MAX_LONGITUD_NOMBRE 50
+    
+    struct estudiante{
+      int numero_registro;
+      char nombre[MAX_LONGITUD_NOMBRE];
+      char carrera[MAX_LONGITUD_NOMBRE];
+      int edad;
+    };
+int main()
+{
+   struct estudiante estudiantes[MAX_ESTUDIANTES];
+   printf("Ingresa los datos de los estudiantes\n");
+   
+   for(int i = 0;i < MAX_ESTUDIANTES;i++){
+       printf("Registro de estudiantes");
+       scanf("%d", &(estudiantes[i].numero_registro));
+       printf("Nombre (con espacios entre nombre y apellido):");
+       scanf("%s", estudiantes[i].nombre);
+       printf("carrera:");
+       scanf("%s", estudiantes[i].carrera);
+       printf("Edad : ");
+       scanf("%d", &(estudiantes[i].edad));
+       printf("\n");
+    
+   }
+   for(int i = 0 ; i < MAX_ESTUDIANTES ; i++)
+   {
+    printf("Numero: %d \n", estudiantes[i].numero_registro);
+    printf("Nombre: %s \n", estudiantes[i].nombre);
+    printf("carrera: %s \n", estudiantes[i].carrera);
+    printf("Edad: %d \n", estudiantes[i].edad);
+   }
+    return 0;
+}
+
