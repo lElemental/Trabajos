@@ -1,0 +1,31 @@
+//Arreglos y punteros 
+#include <stdio.h>
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    float calificaciones[18]; // Se corrigió el tamaño del arreglo a 18
+ 
+    float decimales[] = {0.1, 0.0, -0.2, 0.3, 0.4, 0.5, -0.1, 0.0, 0.2, 0.3, 0.4, 0.0, -0.1, 0.2, 0.1, 0.0, 0.1}; // Se corrigieron los valores negativos
+ 
+    float *ptr_calificaciones = calificaciones;
+ float *ptr_decimales = decimales;
+    printf("Ingrese las 18 calificaciones:\n");
+ 
+    for (int i = 0; i < 18; i++) { // Se corrigió la condición del bucle
+ 
+        printf("Calificación %d: ", i + 1);
+ 
+        scanf("%f", ptr_calificaciones + i); // Se corrigió el uso de scanf
+ 
+    }
+ for (int i = 0; i < 18 ; i++)
+ {
+     calificaciones[i]=*ptr_calificaciones+*ptr_decimales;
+     printf("%f\n", calificaciones[i]);
+     ptr_calificaciones++;
+     ptr_decimales++;
+ }
+    return 0;
+}
