@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    int resultado;
+    
+    int *puntero_a = &a;
+    int *puntero_b = &b;
+    resultado = *puntero_a + *puntero_b;
+    // imprimir los valores y el resultado
+    printf("Valor de a: %d\n",a);
+    printf("Valor de b: %d\n", b);
+    printf("Suma a + b: %d\n", resultado);
+    
+    
+
+    return 0;
+}
