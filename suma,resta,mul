@@ -1,0 +1,63 @@
+/*PASO PARAMETROS CON PUNTEROS*/
+#include <stdio.h>
+#include <math.h>
+float suma (float a , float b)
+{
+
+return a + b ;
+}
+float resta (float a , float b)
+{
+    return a - b;
+}
+float mul (float a , float b)
+{
+    return a * b;
+}
+float div (float a , float b)
+{
+    return a/b;
+}
+float pot (float a , float b)
+{
+    for pow(a,b)
+}
+
+//Funcion para duplicar cada elemento del miArreglo
+void duplicarElementos(int *arr, int tam)
+{
+    for (int i = 0;1<tam; i++) 
+    arr[i]=arr[i]*2;
+}
+void imprimirArreglo(int*arr,int tam)
+{
+    printf("Arreglo resultante");
+    for (int i = 0 ; i < tam; i++)
+    {
+       printf("%d", arr[i]); 
+    }
+}
+int main()
+{
+    float a=3;
+    float b=5;
+    float suma,resta,mil,pot;
+    float div; 
+    suma= suma (a,b);
+    resta = resta (a,b);
+    mul = multiplica(a,b);
+    div = divide(a,b);
+    pot = pot(a,b);
+    
+    const int tamano=5;
+    int miArreglo[tamano]={1,2,3,4,5};
+    
+    //Llamar a la funcion para duplicar elementos 
+    duplicarElementos(miArreglo,tamano);
+    
+    //Llamada a la funcion para limpiar un arreglo;
+    imprimirArreglo(miArreglo,tamano);
+    
+
+    return 0;
+}
