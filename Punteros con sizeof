@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+struct Punto{
+    int x;
+    int y;
+}Punto;
+
+int main()
+{
+     
+    
+    //Tipos de datos simples 
+    printf("sizeof(char): %zu bytes\n", sizeof(char));
+    printf("sizeof(int): %zu bytes\n", sizeof(int));
+    printf("sizeof(float): %zu bytes\n", sizeof(float));
+    printf("sizeof(Punto): %zu bytes\n", sizeof(Punto));
+    //Tipos de datos modicadores
+    printf("sizeof(double): %zu bytes\n", sizeof(double));
+    printf("sizeof(short): %zu bytes\n", sizeof(short));
+    printf("sizeof(long): %zu bytes\n", sizeof(long));
+    printf("sizeof(long long): %zu bytes\n", sizeof(long long));
+   
+    //Defenir una variable entera 
+    int numero = 42;
+    int *puntero = &numero;
+    *puntero = 20;
+    printf("Valor de la variable : %i\n",*puntero);
+    printf("%i\n", *puntero);
+    printf("%i\n", &puntero);
+    printf("%i\n", puntero);
+    
+    
+    
+
+    return 0;
+}
