@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+#include <string.h>
+
+struct Laboratorio
+{
+	char ID [50];
+	char nombre[50];
+	char isbn[20];
+	int noequipos;
+	char caracteristicas[20];
+	
+	
+};
+
+int main()
+{
+    int cantLabs;
+    printf("Numero de Laboratorios");
+    scanf("%d",&cantLabs);
+	
+	struct Laboratorio laboratorio[cantLabs];
+	for(int i=0;i<cantLabs;i++)
+	{
+	
+	printf("ingrese el ID");
+	scanf("%s",laboratorio[i].ID);
+    printf("ingrese el nombre del laboratorio");
+    scanf("%s",laboratorio[i].nombre);
+    printf("Ingrese el numero de equipos");
+    scanf("%d" ,&laboratorio[i].noequipos);
+    printf("Ingrese las caracteristicas");
+    scanf("%s", laboratorio[i].caracteristicas);
+  
+    
+}
+for (int i = 0; i<cantLabs;i++)
+{
+
+printf("INFORMACION DEL LABORATORIO \n");
+printf("ID %s \n",laboratorio[i].ID);
+printf("Nombre %s \n",laboratorio[i].nombre);
+printf("NoEquipos %d \n",laboratorio[i].noequipos);
+printf("caracteristicas %s \n",laboratorio[i].caracteristicas);
+
+
+
+}
+    return 0;
+}
+  
