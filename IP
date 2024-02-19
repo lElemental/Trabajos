@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+#define MAX_DISPOSITIVOS 5
+
+struct DispositivoRed{
+    char tipo[20];
+    int puertos;
+    char direccionIP[15];
+    
+};
+int main()
+{
+    struct DispositivoRed dispositivored[MAX_DISPOSITIVOS];
+    struct DispositivoRed *ptrdispositivored;
+  
+    for(ptrdispositivored = dispositivored; ptrdispositivored < dispositivored + MAX_DISPOSITIVOS; ptrdispositivored++){
+    printf("Dispositivos: ");
+    scanf("%s", ptrdispositivored -> tipo);
+    printf("Puertos: ");
+    scanf("%d", &(ptrdispositivored -> puertos));
+    printf("Direccion IP: ");
+    scanf("%s", ptrdispositivored -> direccionIP);
+}
+printf("\n");
+
+for(ptrdispositivored = dispositivored; ptrdispositivored < dispositivored + MAX_DISPOSITIVOS; ptrdispositivored++){
+printf("Tipo:%s\n", ptrdispositivored -> tipo, ptrdispositivored);
+printf("puerto: %d",ptrdispositivored -> puertos);
+printf("IP: %s\n",ptrdispositivored -> direccionIP);
+    }
+    printf("\n");
+    return 0;
+}
