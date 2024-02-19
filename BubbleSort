@@ -1,0 +1,86 @@
+#include <time.h>
+#include <stdio.h>
+
+void llenarArreglo (int arreglo[],int tamano)
+{
+    printf("INGRESE LOS ELEMENTOS DEL ARREGLO\n");
+    for(int i=0;i<tamano;i++)
+    {
+        printf("Elemento #%d: ", i + 1);
+        scanf("%d", & arreglo [i]);
+    }//fin del for 
+    
+}//fin de la función
+void imprimirArreglo(int arreglo[], int tamano)
+{
+    printf("ARREGLO: [");
+    for (int i=0;i<tamano; i++)
+    {
+        printf("%d",arreglo[i]);
+        if(i<tamano-1)
+        {
+            printf(", ");
+        }//fin del if
+        
+    }//fin del for
+    printf("] \n");
+    //orden Burbuja 
+   
+}//fin de la función imprimirArreglo
+
+//Burbuja
+void ordenarBurbuja(int arreglo[], int tamano){
+    for (int i = 0; i < tamano; i++) 
+    {
+      for (int j = 0; j < tamano - 1 - i; i++)
+      {
+          if(arreglo[j] > arreglo[j + 1])
+          {
+              int temp = arreglo[j];
+              arreglo[j] = arreglo[j + 1];
+              arreglo[j + 1] = temp;
+          }
+      }
+    }
+    printf("Arreglo acomodado");
+}
+
+void BubbleSort(int array[], int size){
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size - 1 - i; j++){
+            if(array[j] > array[j + 1]){
+                int vacio = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = vacio;
+            }
+        }
+    }
+}
+
+int main()
+{
+	clock_t comienzo;
+    int tamano;
+    
+    //Pedir al usuario que ingrese el tamaño del arreglo 
+    printf("ingrese el tamaño del arreglo:");
+    scanf("%d",&tamano);
+    
+    int arreglo[tamano];
+    
+    //Llenar el arreglo con valores ingresados por el usuario 
+    llenarArreglo(arreglo,tamano);
+    
+    printf("Arreglo original:");
+    imprimirArreglo(arreglo,tamano);
+    //ordenarBurbuja(arreglo,tamano);
+    BubbleSort(arreglo, tamano);
+    printf("Arreglo ordenado:");
+    imprimirArreglo(arreglo,tamano);
+    
+    printf("Número de segundos transcurridos desde el comienzo del programa: %f s\n", (clock() - comienzo) / (double)CLOCKS_PER_SEC);
+
+    return 0;
+
+}
+
