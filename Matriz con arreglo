@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+// Constantes
+ 
+// Funciones
+ 
+// Estructuras
+ 
+// Inicio función principal
+int main(void){
+    // Declaración de variables
+    int mat1[3][3]; // Matriz 1
+    int mat2[3][3]; // Matriz 2
+    int mat3[3][3]; // Matriz 3
+    
+    int *ptr_mat1 = mat1; // Apuntador a matriz 1
+    int *ptr_mat2 = mat2; // Apuntador a matriz 2
+    int *ptr_mat3 = mat3; // Apuntador a matriz 3
+    
+    printf("Ingrese los elementos de la matriz: \n");
+    
+    // LLenado de la matriz 1  con apuntadores
+    for(int i = 0; i < 3; i++){ // Filas
+        for(int j = 0; j < 3; j++){ // Columnas
+            printf("Elemento [%d][%d]: ", i + 1, j + 1);
+            scanf("%d", &*(ptr_mat1 + i + j));
+        }
+    }
+    // Impresión de la matriz 1 con apuntadores
+    for(int i = 0; i < 3; i++){ // Filas
+        printf("\n");
+        for(int j = 0; j < 3; j++){ // Columnas
+            printf("%d ", *(ptr_mat1 + i + j));
+        }
+    }
+    printf("\n");
+    
+    // Llenado de la matriz 2 con apuntadores
+    for(int i = 0; i < 3; i++){ // Filas
+        for(int j = 0; j < 3; j++){ // Columnas
+            printf("Elemento [%d][%d]: ", i + 1, j + 1);
+            scanf("%d", &*(ptr_mat2 + i + j));
+        }
+    }
+    
+    // Impresión de la matriz 2 con apuntadores
+     for(int i = 0; i < 3; i++){ // Filas
+        printf("\n");
+        for(int j = 0; j < 3; j++){ // Columnas
+            printf("%d ", *(ptr_mat2 + i + j));
+        }
+    }
+    printf("\n");
+    
+    // Suma de matrices con apuntadores
+    for(int i = 0; i < 3; i++){ // Filas
+        for(int j = 0; j < 3; j++){ // Columnas
+            *(ptr_mat3 + i + j) = (*(ptr_mat1 + i + j)) + (*(ptr_mat2 + i + j)); // *(ptr_mat3 + i + j) apuntara al valor ijotaesimo de la matriz 3
+            //(*(ptr_mat1 + i + j)) + (*(ptr_mat2 + i + j)); Es la suma de los valores de las matrices en sus respectivos indices utilizando apuntadores
+        }
+    }
+    // Impresión de la matriz 3 con apuntadores
+    for(int i = 0; i < 3; i++){ // Filas
+        printf("\n");
+        for(int j = 0; j < 3; j++){ // Columnas
+            printf("%d ", *(ptr_mat3 + i + j));
+        }
+    }
+    printf("\n");
+    
+   
+    return 0;
+}// Fin función principal
